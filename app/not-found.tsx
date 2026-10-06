@@ -1,4 +1,4 @@
-import css from './HomePage.module.css';
+import css from './Not-Found.module.css';
 
 export default function NotFound() {
   return (
