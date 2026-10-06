@@ -12,12 +12,14 @@ interface SearchNotesProps {
   search?: string;
   page: number;
   perPage: number;
+  tag?: string;
 }
 
 export async function fetchNotes({
   search,
   page,
-  perPage
+  perPage,
+  tag
 }: SearchNotesProps): Promise<FetchNotesProps> {
   const response = await axios.get<FetchNotesProps>(
     `https://notehub-public.goit.study/api/notes`,
@@ -25,7 +27,8 @@ export async function fetchNotes({
       params: {
         search,
         page,
-        perPage
+        perPage,
+        tag
       },
       headers: {
         Authorization: `Bearer ${key}`

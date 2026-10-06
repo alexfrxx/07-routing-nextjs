@@ -1,11 +1,10 @@
 import { useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import css from './Modal.module.css';
-// import type { PostNote } from '../../types/note';
 
 interface ModalProps {
   onClose: () => void;
-  // onSubmit: (note: PostNote) => void;
+
   children: React.ReactNode;
 }
 
